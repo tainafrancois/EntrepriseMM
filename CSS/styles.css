@@ -1,0 +1,352 @@
+@font-face {
+    src: url(fonts/Slabo27px-Regular);
+    font-family: Slabo27px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Slabo27px;
+    
+}
+
+/* Header */
+
+.navbar{
+    background: #fff;
+    height: 80px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+#logo{
+    width: 200px;
+    height: 100px;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{
+    height: 80px;
+}
+
+.navbar__link{
+    color: #000053;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #550000;
+    color: #fff;
+}
+
+.button:hover{
+    background: #7E7474;
+    transition: all 0.3s ease;
+}
+
+.navbar__link:hover{
+    color: #B8c1a9;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #fff;
+    }
+
+    .navbar__menu.active{
+        background: #fff;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background:#550000;
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn{
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+/* Main Section */
+
+.main{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background: rgba(16, 4, 94, 0.3) url(../images/Hand-Care.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+.main__content h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* Quote Section */
+
+.quote{
+    background: #fff;
+}
+.quote__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 60vh;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.quote__content h1{
+    font-size: 3rem;
+    color: #000053;
+}
+
+.quote__content h2{
+    font-size: 2rem;
+}
+
+.quote__container p{
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #550000;
+}
+
+.quote__btn{
+    font-size: 1rem;
+    background-color: #550000;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.quote__btn a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.quote__btn:hover{
+    background: #7E7474;
+    transition: all 0.3s ease;
+}
+
+#quote__img{
+    height: 100%;
+    width: 100%;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 790px) {
+    .quote__container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .quote__content{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .quote__content h1{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .quote__content h2{
+        font-size: 2rem;
+    }
+
+    .quote__content p{
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Map Section */
+#map{
+    height: 500px;
+    width: 100%;
+}
+
+.map__container{
+    background-color: #000053;
+}
+
+.map__content{
+    padding: 20px;
+}
+
+.map__content h2{
+    color: #fff;
+    text-align: center;
+    
+}
+
+.near__container{
+    display: grid;
+    grid-template-columns: 150px 150px 380px;
+    grid-template-rows: 200px 200px;
+    gap: 30px;
+}
+
+
+
+
