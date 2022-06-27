@@ -1,6 +1,6 @@
 @font-face {
-    src: url(fonts/Slabo27px-Regular);
-    font-family: Slabo27px;
+    src: url(fonts/Merriweather);
+    font-family: 'Merriweather', serif;
 }
 
 *{
@@ -9,21 +9,18 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: Slabo27px;
+    font-family: 'Merriweather', serif;
     
 }
 
 /* Header */
-
 .navbar{
     background: #fff;
     height: 80px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    
     position: sticky;
     top: 0;
     z-index: 999;
@@ -44,7 +41,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    
 }
 
 #logo{
@@ -139,7 +135,7 @@
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 50vh;
+        height: 65vh;
         font-size: 1.6rem;
     }
 
@@ -207,12 +203,11 @@
 
 
 /* Main Section */
-
 .main{
     min-height: 60vh;
     display: flex;
     align-items: center;
-    background: rgba(16, 4, 94, 0.3) url(../images/Hand-Care.jpg) no-repeat;
+    background: rgba(16, 5, 86, 0.3) url(../images/Hand-Care.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -226,7 +221,6 @@
 }
 
 /* Quote Section */
-
 .quote{
     background: #fff;
 }
@@ -288,7 +282,6 @@
     width: 100%;
 }
 
-/* Mobile Responsive */
 @media screen and (max-width: 790px) {
     .quote__container{
         display: grid;
@@ -296,13 +289,13 @@
         align-items: center;
         justify-self: center;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 30px;
         height: 90vh;
     }
 
     .quote__content{
         text-align: center;
-        margin-bottom: 2rem;
+        
     }
 
     .quote__content h1{
@@ -318,16 +311,23 @@
         margin-top: 1rem;
         font-size: 1rem;
     }
+
+    #quote__img{
+        object-fit: contain;
+        width: 100%;
+        height: 350px;  
+    }
+
 }
 
 /* Map Section */
-#map{
+#map{ 
     height: 500px;
     width: 100%;
 }
 
 .map__container{
-    background-color: #000053;
+    background-color: #F6F6F6;
 }
 
 .map__content{
@@ -335,17 +335,144 @@
 }
 
 .map__content h2{
-    color: #fff;
+    color: #000053;
     text-align: center;
-    
 }
 
+/* Near Section */
 .near__container{
-    display: grid;
-    grid-template-columns: 150px 150px 380px;
-    grid-template-rows: 200px 200px;
-    gap: 30px;
+    background-color: #F6F6F6;
+    padding: 10px 80px 80px;
 }
+
+.near__title h2{
+    text-align: center;
+    color: #000053;
+    padding: 30px;
+}
+
+.near__content{
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns:repeat(4, 1fr);
+    align-items: center;
+    justify-self: center; 
+    margin-bottom: 0;
+}
+
+.near__content img{
+    height: 250px;
+    width: 100%;
+}
+
+.near__content p{
+    font-size: 20px;
+    text-align: center;
+    color: #7F8487;
+    padding: 15px;
+}
+
+@media screen and (max-width: 960px){
+
+    .near__content{
+        display: grid;
+        gap: 5rem;
+        grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .near__content p{
+        padding: 20px;
+    }
+}
+
+
+/* Footer */
+.footer__container{
+    background-color: #000053;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+}
+
+.footer{
+    display: flex;
+    flex-basis: 100%;
+    height: 25vh;
+    color: #fff;
+    justify-content: space-around;
+    padding: 10px 100px;
+    gap: 45px; 
+}
+
+.footer__contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -30px;
+}
+
+.footer h3{
+    padding-bottom: 10px;
+}
+
+.footer p{
+    padding-bottom: 5px;
+}
+
+.rights__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000053;
+    padding: 0 0 35px 0;
+}
+
+.rights__container img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.rights__container p{
+    color: #fff
+}
+
+@media screen and (max-width: 780px) {
+    .footer__container{
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer img{
+        width: 300px;
+        height: 300px;
+        align-self: center;
+    }
+
+    .rights__container{
+        text-align: center;
+    }  
+}
+
+
+
+
+
 
 
 
