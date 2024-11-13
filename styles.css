@@ -1,15 +1,15 @@
 @font-face {
-    src: url(fonts/Merriweather);
-    font-family: 'Merriweather', serif;
+    src: url(fonts/SourceSansPro);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    list-style: none;
+    /*list-style: none; */
     text-decoration: none;
-    font-family: 'Merriweather', serif;
+    font-family: 'Source Sans Pro', sans-serif;
     
 }
 
@@ -46,6 +46,7 @@
 #logo{
     width: 200px;
     height: 100px;
+    margin-top: 12px;
 }
 
 .navbar__menu{
@@ -67,6 +68,7 @@
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
+    font-family: 'Slabo 27px', serif;
 }
 
 .navbar__btn{
@@ -90,6 +92,7 @@
     border-radius: 4px;
     background: #550000;
     color: #fff;
+    font-family: 'Slabo 27px', serif;
 }
 
 .button:hover{
@@ -218,6 +221,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+    text-align: center;
 }
 
 /* Quote Section */
@@ -233,17 +237,19 @@
     height: 60vh;
     width: 100%;
     max-width: 1000px;
-    padding: 0 20px;
+    padding: 0 40px;
     z-index: 1;
 }
 
 .quote__content h1{
     font-size: 3rem;
     color: #000053;
+    font-family: 'Slabo 27px', serif;
 }
 
 .quote__content h2{
     font-size: 2rem;
+    
 }
 
 .quote__container p{
@@ -337,6 +343,7 @@
 .map__content h2{
     color: #000053;
     text-align: center;
+    
 }
 
 /* Near Section */
@@ -349,6 +356,7 @@
     text-align: center;
     color: #000053;
     padding: 30px;
+    
 }
 
 .near__content{
@@ -417,6 +425,7 @@
 
 .footer h3{
     padding-bottom: 10px;
+    font-family: 'Slabo 27px', serif;
 }
 
 .footer p{
@@ -468,6 +477,258 @@
         text-align: center;
     }  
 }
+
+/* Mission Section */
+
+.mission_container{
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    background: rgba(54, 54, 54, 0.3) url(../images/Main-Image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+.mission_container h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3em;
+    margin-top: 1em;
+    text-align: center;
+
+}
+
+/* text */
+
+.mission_text_container .head h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Slabo 27px', serif;
+}
+
+.mission_text_container .head .line{
+    width: 100%;
+    height: 2px;
+    color: #B8c1a9;
+    background:#B8c1a9;
+}
+
+.mission_text_container .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text p{
+    line-height: 1.60em;
+    font-size: 1.2em;
+}
+
+.mission_text_container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 50px;
+}
+
+.text_content{
+    margin-bottom: 5em;
+}
+
+/* services */
+
+.service_button_container{
+    padding: 80px;
+    background: #F9F9F9; 
+}
+
+.service_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.service_content p{
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+}
+
+.service_content a{
+    letter-spacing: 4px;
+}
+
+.service_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #B8c1a9;
+    color: #fff;
+}
+
+.service_btn:hover{
+    background: #000053;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 650px){
+
+    .mission_container h1{
+        margin-top: 2.6em;
+    }
+}
+
+
+/* Services Section */
+
+.services_container{
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    background: rgba(54, 54, 54, 0.3) url(../images/Main-Image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+
+}
+
+.services_container h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* price */
+
+.price_text_container{
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    padding: 40px 50px;
+    gap: 30px;
+    justify-items: center;
+    
+}
+
+.price_text h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.4rem;
+     color:#7E7474;
+    font-style: italic;
+}
+
+.price_text span{
+    font-family: 'Slabo 27px', serif;
+    text-decoration: underline;
+   
+}
+
+.price_text p{
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* services */
+
+#services {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #F9F9F9;
+    
+}
+
+.service{
+    width: 500px;
+    padding: 50px;
+    /* box-shadow: 2px 5px 2px #0000001a; */
+   
+}
+
+.service img{
+    max-width: 100%;
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.service h1{
+    padding-top: 15px;
+    /* text-transform: uppercase; */
+    font-size: 1.4rem;
+    color:#000053;
+    font-family: 'Slabo 27px', serif;
+    font-style: italic;
+    padding: 20px;
+}
+
+.service ul{
+    padding: 15px 20px;
+    margin: 0; 
+}
+
+.service li {
+    margin-bottom: 11px; 
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+
+}
+
+.service i {
+    color: #000053;
+}
+
+.service span{
+    margin-left: 10px;
+}
+
+/*
+.services_description_container{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    padding: 20px 50px;
+
+} 
+*/
+
+
+
+
+
+
+
+
+
 
 
 
