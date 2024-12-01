@@ -661,31 +661,34 @@
     flex-wrap: wrap;
     width: 100%;
     background-color: #F9F9F9;
+    /*background: rgba(0, 5, 86, 0.3) url(../images/monogram.jpg); */
+    background-blend-mode: lighten;
+    
     
 }
 
 .service{
-    width: 500px;
-    padding: 50px;
-    /* box-shadow: 2px 5px 2px #0000001a; */
-   
+    width: 400px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin: 50px;
+    background-color: white;
 }
 
 .service img{
     max-width: 100%;
     width: 400px;
     height: 300px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 }
 
 .service h1{
-    padding-top: 15px;
+    padding: 15px 20px 5px 20px;
     /* text-transform: uppercase; */
     font-size: 1.4rem;
     color:#000053;
     font-family: 'Slabo 27px', serif;
     font-style: italic;
-    padding: 20px;
 }
 
 .service ul{
