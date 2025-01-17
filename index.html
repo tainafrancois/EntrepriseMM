@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Résidence Francine et Maurice</title>
        
     </head>
@@ -23,9 +24,8 @@
                 <ul class="navbar__menu">
                     <li class="navbar__item"><a class="navbar__link" href="about.html">À Propos</a></li>
                     <li class="navbar__item"><a class="navbar__link" href="services.html">Services</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">Emploie</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">Nous Joindre</a></li>
-                    <li class="navbar__btn"><a class="button" href="#">Prendre Rendez-Vous</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="contact.html">Nous Joindre</a></li>
+                    <li class="navbar__btn"><a class="button" onclick="window.location.href='tel:+15145949670'"><i class="fa-solid fa-phone"></i><strong>514 594-9670</strong> Prix & Disponibilité</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,9 +33,22 @@
         <!-------------------------------------- Main Section ------------------------------------------->
 
         <div class="main">
-            <div class="main__content">
-                <h1>RÉSIDENCE PRIVÉE POUR AÎNÉS</h1>
+            <div class="main__overlay">
+                <h1>Résidence privée pour ainés semi-autonomes</h1>
             </div>
+            <div class="main__slider">
+                <div class="main__slide active">
+                    <img src="images/Hand-Care.jpg" alt="Slide 1">
+                </div>
+                <div class="main__slide">
+                    <img src="images/Main-Image.jpg" alt="Slide 2">
+                </div>
+                <div class="main__slide">
+                    <img src="images/carousel-picture-3.jpg" alt="Slide 3">
+                </div>
+            </div>
+            <div id="previous" class="slider__arrow">&lt;</div>
+            <div id="next" class="slider__arrow">&gt;</div>
         </div>
     
         <!-------------------------------------- Story Section ------------------------------------------->
@@ -60,7 +73,8 @@
             <div class="map__content">
                 <h2>SITUÉ À SAINTE-THÉRÈSE</h2>
             </div>
-            <div id="map"></div>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5579.879345860704!2d-73.83132940000004!3d45.631948200000025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc927cb57cacbd3%3A0xf9ee17cd1e24bac4!2s208%20Rue%20Turgeon%2C%20Sainte-Th%C3%A9r%C3%A8se%2C%20QC%20J7E%203J5!5e0!3m2!1sen!2sca!4v1737097912541!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!--<div id="map"></div>-->
         </div>
 
         <!----------------------------------- Near Section ----------------------------------------------------->
@@ -96,11 +110,11 @@
             <div class="footer">
                 <div class="footer__quote">
                     <h3>Résidence Francine & Maurice</h3>
-                    <p>Résidence privée pour personnes agées <br>semi-autonome</br></p>
+                    <p>Résidence privée pour personnes âgées <br>semi-autonomes</br></p>
                 </div>
                 <div class="footer__contact">
                     <h3>Contactez-Nous</h3>
-                    <p>(514) 924-0670</p>
+                    <p>(514) 594-9670</p>
                     <p>(450) 437-8734</p>
                     <p>jenmilord@hotmail.com</p>
                 </div>
@@ -113,12 +127,12 @@
         </div>
 
         <div class="rights__container">
-            <p>© 2024 Résidence Francine et Maurice Tous Droits Réservés</p>
+            <p>© 2025 Résidence Francine et Maurice Tous Droits Réservés</p>
             <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
         </div>
 
 
     <script src="app.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8d-d8eKJuFwqcaZKCmYWxUPadQqhRBjo&callback=initMap"></script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8d-d8eKJuFwqcaZKCmYWxUPadQqhRBjo&callback=initMap"></script>-->
     </body>
 </html>
